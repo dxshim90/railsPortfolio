@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveTimeout": 5000,
+  "ruby.format": "rubocop",
+  "ruby.rubocop.onSave": true,
+  "ruby.rubocop.executePath": "/Users/flatironschool/.rvm/gems/ruby-2.6.3/bin/rubocop"
+}
