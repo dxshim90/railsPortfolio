@@ -4,9 +4,10 @@
 <p><%= link_to 'Create a new portfolio item', new_my_portfolio_path %></p>
 
 <% @portfolio_items.each do |item| %>
-<h2><%= link_to item.title, my_portfolio_path(item.id)%></h2>
+<h2><%= link_to item.title, my_portfolio_show_path(item.id)%></h2>
 <p><%= item.subtitle%></p>
 <p><%= item.body %></p>
 <%= image_tag item.tumb_image unless item.tumb_image.nil? %>
 <%= link_to 'edit', edit_my_portfolio_path(item.id) %>
+<%= link_to 'Delete', my_portfolio_path(item.id), method: :delete, data: {confirm: "Really?"} %>
 <%end%>

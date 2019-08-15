@@ -45,6 +45,15 @@ def create
     @portfolio_item = MyPortfolio.find(params[:id])
   end
 
+  def destroy
+    @portfolio_item = MyPortfolio.find(params[:id])
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to my_portfolios_url, notice: 'Blog was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
       
   end
 
