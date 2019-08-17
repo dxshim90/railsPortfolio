@@ -8,9 +8,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+3.times do |topic|
+Topic.create(title: "Topic #{topic}")
+end
+
+
 10.times do |blog|
   Blog.create!(
-    title: "Blog#{blog}", body: 'LIPSUM LIPSUM LIPSUM LIPSUM LIPSUM LIPSUM LIPSUM LIPSUM LIPSUM '
+    title: "Blog#{blog}", body: 'LIPSUM LIPSUM LIPSUM LIPSUM LIPSUM LIPSUM LIPSUM LIPSUM LIPSUM ',
+    topic_id: Topic.last.id
   )
 end
 
@@ -24,10 +30,21 @@ end
 
 puts '5 skills created'
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
   MyPortfolio.create!(
     title: "MyPortfolio_item #{portfolio_item}",
     subtitle: 'Service',
+    body: 'LIPSUM LIPSUM LIPSUM LIPSUM',
+    main_image: 'https://via.placeholder.com/600x400',
+    tumb_image: 'https://via.placeholder.com/350x150'
+  )
+end
+
+
+1.times do |portfolio_item|
+  MyPortfolio.create!(
+    title: "MyPortfolio_item #{portfolio_item}",
+    subtitle: 'React',
     body: 'LIPSUM LIPSUM LIPSUM LIPSUM',
     main_image: 'https://via.placeholder.com/600x400',
     tumb_image: 'https://via.placeholder.com/350x150'
