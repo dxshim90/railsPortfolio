@@ -50,3 +50,12 @@ end
     tumb_image: 'https://via.placeholder.com/350x150'
   )
 end
+
+3.times do |technology| 
+
+MyPortfolio.last.technologies.create(
+  name: "Technology #{technology}",
+
+)
+end
+puts "3 techs added"
