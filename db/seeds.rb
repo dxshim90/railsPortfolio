@@ -51,11 +51,9 @@ end
   )
 end
 
-3.times do |technology| 
-
+3.times do |technology|
 MyPortfolio.last.technologies.create(
   name: "Technology #{technology}",
-
 )
 end
 puts "3 techs added"
